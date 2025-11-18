@@ -8,12 +8,21 @@ test.describe('Login Feature', () => {
   test('Valid Login', async ({ page }) => {
     const login = new LoginPage(page);
 
+<<<<<<< HEAD
     await login.Goto();
     await login.login('siddharthpc23@gmail.com', 'Password@123!');
     
     
     // await expect(page.locator("//button[@routerlink='/dashboard/myorders']")).toBeVisible();
     await expect(page.getByRole('listitem').filter({ hasText: 'ORDERS' })).toBeVisible();
+=======
+    await login.goto();
+    await login.login('Test@email.com', 'Password$!23');
+
+    
+    // await expect(page.locator("//button[@routerlink='/dashboard/myorders']")).toBeVisible();
+    await expect(page.getByRole('button', { name: '   ORDER '})).toBeVisible();
+>>>>>>> cab14df (Initial file login issues)
 });
 
 });
