@@ -4,7 +4,7 @@ import { Locator } from "@playwright/test";
 export class ReportsPage {
     
   readonly page: Page;
-  readonly check_labels :Locator
+  readonly check_text :Locator
   readonly checkbox: Locator;
   readonly submitButton: Locator;
   readonly successToast: Locator;
@@ -26,7 +26,7 @@ export class ReportsPage {
     this.selected_option = page.locator("#exampleFormControlSelect1")
     //checkboxes
     this.checkbox = page.getByRole("checkbox", { name: 'Check me out if you Love IceCreams!' })
-    this.check_labels = page.getByLabel('Check me out if you Love IceCreams!')
+    this.check_text = page.getByText('Check me out if you Love IceCreams!')
     //footer 
     this.footertext = page.getByText("Copyright © ProtoCommerce 2018");
     //page???
